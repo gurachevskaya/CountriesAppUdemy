@@ -14,6 +14,8 @@
 		18A17C5D2A1BB0440049DAC9 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 18A17C5C2A1BB0440049DAC9 /* Apollo */; };
 		18A17C602A1BB1050049DAC9 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 18A17C5F2A1BB1050049DAC9 /* Queries.graphql */; };
 		18C5AB622A1CCFA400308BA7 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 18C5AB612A1CCFA400308BA7 /* schema.graphqls */; };
+		18C5AB662A1CD60600308BA7 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AB652A1CD60600308BA7 /* Apollo.swift */; };
+		18C5AB692A1CD77B00308BA7 /* CountriesAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 18C5AB682A1CD77B00308BA7 /* CountriesAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		18A17C5F2A1BB1050049DAC9 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		18C5AB612A1CCFA400308BA7 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		18C5AB642A1CD18700308BA7 /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
+		18C5AB652A1CD60600308BA7 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C5AB692A1CD77B00308BA7 /* CountriesAPI in Frameworks */,
 				18A17C5D2A1BB0440049DAC9 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +49,7 @@
 				18C5AB632A1CD18700308BA7 /* Packages */,
 				18A17C4C2A1BAFE60049DAC9 /* CountriesApp */,
 				18A17C4B2A1BAFE60049DAC9 /* Products */,
+				18C5AB672A1CD77B00308BA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +86,7 @@
 			children = (
 				18C5AB612A1CCFA400308BA7 /* schema.graphqls */,
 				18A17C5F2A1BB1050049DAC9 /* Queries.graphql */,
+				18C5AB652A1CD60600308BA7 /* Apollo.swift */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -91,6 +97,13 @@
 				18C5AB642A1CD18700308BA7 /* CountriesAPI */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		18C5AB672A1CD77B00308BA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +124,7 @@
 			name = CountriesApp;
 			packageProductDependencies = (
 				18A17C5C2A1BB0440049DAC9 /* Apollo */,
+				18C5AB682A1CD77B00308BA7 /* CountriesAPI */,
 			);
 			productName = CountriesApp;
 			productReference = 18A17C4A2A1BAFE60049DAC9 /* CountriesApp.app */;
@@ -172,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A17C502A1BAFE60049DAC9 /* ContentView.swift in Sources */,
+				18C5AB662A1CD60600308BA7 /* Apollo.swift in Sources */,
 				18A17C4E2A1BAFE60049DAC9 /* CountriesAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +405,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 18A17C5B2A1BB0440049DAC9 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		18C5AB682A1CD77B00308BA7 /* CountriesAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CountriesAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

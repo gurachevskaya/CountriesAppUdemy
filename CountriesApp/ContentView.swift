@@ -1,16 +1,35 @@
-//
-
 import SwiftUI
+import CountriesAPI
 
 struct ContentView: View {
+    @State private var countries: [CountriesAPI.GetAllCountriesQuery.Data.Country] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                List(countries, id: \.code) { country in
+                    HStack {
+                        Text(country.emoji)
+                        Text(country.name)
+                    }
+                }.listStyle(.plain)
+            }
+            .onAppear {
+                Network.shared.apollo.fetch(query: GetAllCountriesQuery()) { result in
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let result):
+                        if let countries = result.data?.countries {
+                            DispatchQueue.main.async {
+                                self.countries = countries
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Countries")
         }
-        .padding()
     }
 }
 
