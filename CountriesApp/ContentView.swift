@@ -1,36 +1,24 @@
 import SwiftUI
-import CountriesAPI
 
 struct ContentView: View {
-    @State private var countries: [CountriesAPI.GetAllCountriesQuery.Data.Country] = []
+    @StateObject var viewModel = CountryListViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                List(countries, id: \.code) { country in
+                List(viewModel.countries, id: \.code) { country in
                     NavigationLink(
                         destination: CountryInfoView(country: country),
                         label: {
                         HStack {
-                            Text(country.emoji)
+                            Text(country.flagEmoji)
                             Text(country.name)
                         }
                     })
                 }.listStyle(.plain)
             }
             .onAppear {
-                Network.shared.apollo.fetch(query: GetAllCountriesQuery()) { result in
-                    switch result {
-                    case .failure(let error):
-                        print(error)
-                    case .success(let result):
-                        if let countries = result.data?.countries {
-                            DispatchQueue.main.async {
-                                self.countries = countries
-                            }
-                        }
-                    }
-                }
+                viewModel.getAllCountries()
             }
             .navigationTitle("Countries")
         }

@@ -17,6 +17,8 @@
 		18C5AB662A1CD60600308BA7 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AB652A1CD60600308BA7 /* Apollo.swift */; };
 		18C5AB692A1CD77B00308BA7 /* CountriesAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 18C5AB682A1CD77B00308BA7 /* CountriesAPI */; };
 		18C5AB6B2A1D0BA700308BA7 /* CountryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AB6A2A1D0BA700308BA7 /* CountryInfoView.swift */; };
+		18C5AB6E2A1D1A2D00308BA7 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AB6D2A1D1A2D00308BA7 /* CountryListViewModel.swift */; };
+		18C5AB702A1D1A6000308BA7 /* CountryInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5AB6F2A1D1A6000308BA7 /* CountryInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		18C5AB642A1CD18700308BA7 /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
 		18C5AB652A1CD60600308BA7 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		18C5AB6A2A1D0BA700308BA7 /* CountryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryInfoView.swift; path = ../../../../CountryInfoView.swift; sourceTree = "<group>"; };
+		18C5AB6D2A1D1A2D00308BA7 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryListViewModel.swift; path = ../../../../../CountryListViewModel.swift; sourceTree = "<group>"; };
+		18C5AB6F2A1D1A6000308BA7 /* CountryInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountryInfoViewModel.swift; path = ../../../../../CountryInfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		18A17C4C2A1BAFE60049DAC9 /* CountriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				18C5AB6C2A1D1A1700308BA7 /* ViewModels */,
 				18A17C5E2A1BB0EC0049DAC9 /* GraphQL */,
 				18A17C4D2A1BAFE60049DAC9 /* CountriesAppApp.swift */,
 				18A17C4F2A1BAFE60049DAC9 /* ContentView.swift */,
@@ -107,6 +112,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18C5AB6C2A1D1A1700308BA7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				18C5AB6D2A1D1A2D00308BA7 /* CountryListViewModel.swift */,
+				18C5AB6F2A1D1A6000308BA7 /* CountryInfoViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A17C502A1BAFE60049DAC9 /* ContentView.swift in Sources */,
+				18C5AB702A1D1A6000308BA7 /* CountryInfoViewModel.swift in Sources */,
 				18C5AB662A1CD60600308BA7 /* Apollo.swift in Sources */,
 				18A17C4E2A1BAFE60049DAC9 /* CountriesAppApp.swift in Sources */,
+				18C5AB6E2A1D1A2D00308BA7 /* CountryListViewModel.swift in Sources */,
 				18C5AB6B2A1D0BA700308BA7 /* CountryInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
